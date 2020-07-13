@@ -2,7 +2,7 @@
 
 Google News JS is an open-source package for scraping Google
 News data. It provides easy to API access to main Google News
-feeds.
+feeds. 
 
 Created by *Vladyslav Mokrousov* at [datanews.io](https://datanews.io).
 
@@ -18,14 +18,14 @@ You can use the library to retrieve most popular current headlines,
 retrieve headlines by topic, geographic locations or just using simple
 search.
 
-### Simple
+### Simple example
 
 ```javascript
 const news = require('gnews');
 
 const main = async () => {
     const starship = await news.search('Starship');
-
+    
     for (let article of starship) {
         console.log(article.pubDate + ' | ' + article.title);
     }
@@ -118,7 +118,7 @@ Default configuration: `{ country: 'us', language: 'en', n: 10 }`.
 
 #### Headlines
 
-Find top 5 headlines in Great Britain written in english
+Find top 5 headlines in Great Britain written in english 
 
 ```
 news.headlines({country: 'gb', language: 'en', n: 5})
