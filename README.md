@@ -9,7 +9,7 @@ Created by *Vladyslav Mokrousov* at [datanews.io](https://datanews.io).
 ## Install
 
 ```shell script
-npm install --save google-news-scraper
+npm install --save gnews
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ search.
 ### Simple
 
 ```javascript
-const news = require('google-news-scraper');
+const news = require('gnews');
 
 const main = async () => {
     const starship = await news.search('Starship');
@@ -52,7 +52,7 @@ Tue, 30 Jun 2020 07:00:00 GMT | Starship SN5 completes successful cryogenic proo
 ### Advanced Example
 
 ```javascript
-const news = require('google-news-scraper');
+const news = require('gnews');
 
 const main = async () => {
   const print = item => console.log(item.pubDate + ' | ' + item.title);
@@ -152,4 +152,4 @@ news.search('Starlink')
 
 ## License
 
-See [LICENSE](https://github.com/DatanewsOrg/google-news-js/blob/master/LICENSE).
+See license.txt

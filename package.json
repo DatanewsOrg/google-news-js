@@ -1,7 +1,7 @@
 {
-  "name": "google-news-scraper",
+  "name": "gnews",
   "version": "1.0.0",
-  "description": "Package to easily scrap data from Google News.",
+  "description": "Minimalistic package to asynchronously scrap data from Google News.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
