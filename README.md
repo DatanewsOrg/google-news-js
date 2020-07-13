@@ -152,4 +152,4 @@ news.search('Starlink')
 
 ## License
 
-See license.txt
+See (LICENSE)[https://github.com/DatanewsOrg/google-news-js/blob/master/LICENSE].
