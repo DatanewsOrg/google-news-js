@@ -1,0 +1,19 @@
+{
+  "name": "google-news-scraper",
+  "version": "1.0.0",
+  "description": "Package to easily scrap data from Google News.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Google",
+    "News",
+    "scraper"
+  ],
+  "author": "Vladyslav Mokrousov",
+  "license": "ISC",
+  "dependencies": {
+    "rss-parser": "^3.8.0"
+  }
+}
