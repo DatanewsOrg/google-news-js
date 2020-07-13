@@ -1,8 +1,8 @@
 # Google News JS
 
 Google News JS is an open-source package for scraping Google
-News data. It provides easy to API access to main Google News
-feeds. 
+News data. It provides easy API access to main Google News
+features. 
 
 Created by *Vladyslav Mokrousov* at [datanews.io](https://datanews.io).
 
