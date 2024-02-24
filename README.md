@@ -72,6 +72,10 @@ const main = async () => {
   console.log('Search');
   const search = await news.search('SpaceX', {n : 5});
   search.forEach(print);
+
+  console.log('Website');
+  const website = await news.website('https://www.starlink.com/', {n : 5});
+  website.forEach(print);
 };
 
 main();
@@ -120,7 +124,7 @@ Default configuration: `{ country: 'us', language: 'en', n: 10 }`.
 
 Find top 5 headlines in Great Britain written in english 
 
-```
+```javascript
 news.headlines({country: 'gb', language: 'en', n: 5})
 ```
 
@@ -130,7 +134,7 @@ Find top 5 business articles in US.
 Possible topics: `WORLD`, `BUSINESS`, `TECHNOLOGY`, `SCIENCE`,
 `ENTERTAINMENT`, `SPORTS`, `HEALTH`
 
-```
+```javascript
 news.topic('BUSINESS')
 ```
 
@@ -138,7 +142,7 @@ news.topic('BUSINESS')
 
 Find top 20 news articles about New York.
 
-```
+```javascript
 news.geo('New York', {n: 20})
 ```
 
@@ -146,9 +150,19 @@ news.geo('New York', {n: 20})
 
 Search for top news about Elon Musk's Starlink.
 
-```
+```javascript
 news.search('Starlink')
 ```
+
+#### Website
+
+Search for an specific website with ordering
+
+```javascript
+news.website('https://www.starlink.com/')
+```
+
+
 
 ## License
 
