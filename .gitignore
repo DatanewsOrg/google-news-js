@@ -1,2 +1,4 @@
 test.js
 test_print.js
+node_modules
+pnpm-lock.yaml
