@@ -38,7 +38,7 @@ const search = async (query, {country = 'us', language = 'en', n = 10}={}) => {
   return (await getRss(url)).items.slice(0, Math.max(0, n));
 };
 
-const website = async (query, {country = 'br', language = 'pt', n = 10}={}) => {
+const website = async (query, {country = 'us', language = 'en', n = 10}={}) => {
   const url = SEARCH_RSS + 'site%3A' + encodeURIComponent(query) + '&' +
   fillWebsiteParams(country.toUpperCase(), language.toLowerCase());
   return (await getRss(url)).items.slice(0, Math.max(0, n));
