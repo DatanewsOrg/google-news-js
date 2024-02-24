@@ -9,8 +9,9 @@ const SEARCH_RSS    = 'https://news.google.com/rss/search?q=';
 
 const TOPICS = ['WORLD', 'NATION', 'BUSINESS', 'TECHNOLOGY', 'ENTERTAINMENT', 'SPORTS', 'SCIENCE', 'HEALTH'];
 
-const fillCountryLangParams = (country, language) => `hl=${country}
-  &gl=${language}&ceid=${country}%3A${language}`;
+const fillCountryLangParams = (country, language) => `hl=${country}&gl=${language}&ceid=${country}%3A${language}`;
+
+const fillWebsiteParams = (country, language) => `3ahl=${language}-${country}-&gl=${language}&ceid=${country}%3A${language}-419`;
 
 const getRss = async (url) => await parser.parseURL(url);
 
@@ -37,7 +38,14 @@ const search = async (query, {country = 'us', language = 'en', n = 10}={}) => {
   return (await getRss(url)).items.slice(0, Math.max(0, n));
 };
 
+const website = async (query, {country = 'br', language = 'pt', n = 10}={}) => {
+  const url = SEARCH_RSS + 'site%3A' + encodeURIComponent(query) + '&' +
+  fillWebsiteParams(country.toUpperCase(), language.toLowerCase());
+  return (await getRss(url)).items.slice(0, Math.max(0, n));
+};
+
 exports.headlines = headlines;
 exports.topic = topic;
 exports.geo = geo;
 exports.search = search;
+exports.website = website;
